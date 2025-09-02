@@ -6,6 +6,12 @@
 
 # Docente: Ing. Jean Paul Ordoñez Ibarguen
 
+# Fecha Entrega Máxima: 05/09/25
+
+# Forma entrega: Rama personal
+
+# Formato Actividad_1_Nombre_Apellido.py
+
 # ----------------------------------------------------------------
 
 
