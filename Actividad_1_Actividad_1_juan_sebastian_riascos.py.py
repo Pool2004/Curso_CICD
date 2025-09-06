@@ -38,7 +38,7 @@ print(nombre + ciudad)
 print(edad+dia)
 print( edad-dia)
 print( edad+dia)
-print(edad//dia)
+print(edad/dia)
 print(edad**dia)
 
 
@@ -59,7 +59,7 @@ Parte 2
 
 # PONER SOLUCIÓN PARTE 2
 lista = ( "palabra", str(1345677), "ludica", "tratamieto", str(777))
-(0)       (1)         (2)           (3)         (4)         (5)
+#           (0)       (1)         (2)           (3)         (4)       
 print(lista(1))
 
 
