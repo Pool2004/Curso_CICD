@@ -29,9 +29,17 @@ Parte 1
 
 """
 
-# PONER SOLUCIÓN PARTE 1
+nombre ="juan sebastian"
+ciudad ="cali"
+edad = 18
+dia = 6
+print(nombre + ciudad)
 
-
+print(edad+dia)
+print( edad-dia)
+print( edad+dia)
+print(edad//dia)
+print(edad**dia)
 
 
 
@@ -49,7 +57,10 @@ Parte 2
 
 """
 
-# PONER SOLUCIÓN PARTE 1
+# PONER SOLUCIÓN PARTE 2
+lista = ( "palabra", str(1345677), "ludica", "tratamieto", str(777))
+(0)       (1)         (2)           (3)         (4)         (5)
+print(lista(1))
 
 
 
@@ -58,18 +69,18 @@ Parte 3
 
 Responda. ¿Qué es CI/CD?
 
-R/
+R/ esto significa o es, integracion continua y despliegue continuo
 
 Responda. ¿Qué herramientas hay para desplegar aplicaciones?
 
-R/
+R/ algunas herramientas serian gitlab, clickup, aws codedeploy, circleCI, octopus deply, bambú, codeship, travis CI etc
 
 Responda. ¿Qué herramientas hay para automatizar despliegues?
 
-R/
+R/ algunas herramientas serian: jenkins, circleCI,Docker,ansible, puppet, circleCi
 
 Responda. ¿Qué herramientas en python para automatizar pruebas?
-R/
+R/ las heramientas son: pytest, appium, playwright,locust, selenium
 
 """
 
@@ -89,7 +100,7 @@ Parte 4
 • El repositorio debe tener su respectivo README
 • Debe adjuntar el enlace en este documento
 
-ENLACE A MI REPOSITORIO: 
+ENLACE A MI REPOSITORIO:
 
 """
 
