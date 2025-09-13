@@ -31,7 +31,7 @@ else:
 
 
 
-<<<<<<< HEAD
+
 
 # Grupo de Jean - For con nombre y nota, uniendo con zip y mostrando por estudiante nombre, nota y estado con condicional terciario
 
@@ -41,5 +41,4 @@ else:
 
 
 =======
-# Grupo de Jean - For con nombre y nota, uniendo con zip y mostrando por estudiante nombre, nota y estado con condicional terciario
->>>>>>> main
+
