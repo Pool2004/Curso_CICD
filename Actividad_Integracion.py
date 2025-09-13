@@ -35,10 +35,8 @@ else:
 
 # Grupo de Jean - For con nombre y nota, uniendo con zip y mostrando por estudiante nombre, nota y estado con condicional terciario
 
+for nombre, nota in zip(nombres, notas):
+    print(f"Estudiante: {nombre}, Nota: {nota}, estado: {'Aprobado' if nota >= 3.0 else 'Reprobado'}")  
 
 
-
-
-
-=======
-
+    
