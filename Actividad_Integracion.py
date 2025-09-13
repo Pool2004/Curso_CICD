@@ -22,9 +22,16 @@ while i < cantidad_estudiantes:
 
 # Grupo de Juan - Promedio general de notas y condicionales
 
+promedio = sum(notas) / len(notas)
+
+if (promedio >= 3.0):
+    print("El curso esta aprobado")
+else:
+    print("El curso esta reprobado")
 
 
 
+<<<<<<< HEAD
 
 # Grupo de Jean - For con nombre y nota, uniendo con zip y mostrando por estudiante nombre, nota y estado con condicional terciario
 
@@ -33,3 +40,6 @@ while i < cantidad_estudiantes:
 
 
 
+=======
+# Grupo de Jean - For con nombre y nota, uniendo con zip y mostrando por estudiante nombre, nota y estado con condicional terciario
+>>>>>>> main
