@@ -31,7 +31,29 @@ Parte 1
 
 # PONER SOLUCIÓN PARTE 1
 
+# Parte 1
+# Variables tipo String
+texto1 = "Hola"
+texto2 = "Mundo"
+print(texto1)
+print(texto2)
 
+# Variables tipo entero
+num1 = 10
+num2 = 5
+print(num1)
+print(num2)
+
+# Concatenación de Strings
+print(texto1 + " " + texto2)
+
+# Operaciones con enteros
+print("Suma:", num1 + num2)
+print("Resta:", num1 - num2)
+print("Multiplicación:", num1 * num2)
+print("División:", num1 / num2)
+print("División entera:", num1 // num2)
+print("Módulo:", num1 % num2)
 
 
 
@@ -49,8 +71,19 @@ Parte 2
 
 """
 
-# PONER SOLUCIÓN PARTE 1
+# PONER SOLUCIÓN PARTE 2
 
+# Parte 2
+arreglo = [1, 'a', 3, 'b', 5]
+print(arreglo)
+print("Primer elemento:", arreglo[0])
+print("Último elemento:", arreglo[-1])
+
+# Solo suma, resta y multiplicación si ambos son números
+if isinstance(arreglo[0], int) and isinstance(arreglo[-1], int):
+    print("Suma:", arreglo[0] + arreglo[-1])
+    print("Resta:", arreglo[0] - arreglo[-1])
+    print("Multiplicación:", arreglo[0] * arreglo[-1])
 
 
 """
@@ -74,6 +107,25 @@ R/
 """
 
 
+# PONER SOLUCIÓN PARTE 3
+
+# Parte 3
+# ¿Qué es CI/CD?
+# R/
+# CI/CD significa Integración Continua y Entrega/Despliegue Continuo. Son prácticas para automatizar la integración y entrega de código en proyectos de software.
+
+# ¿Qué herramientas hay para desplegar aplicaciones?
+# R/
+# Algunas herramientas son: Docker, Kubernetes, AWS, Azure, Heroku.
+
+# ¿Qué herramientas hay para automatizar despliegues?
+# R/
+# Jenkins, GitHub Actions, GitLab CI, Travis CI.
+
+# ¿Qué herramientas en python para automatizar pruebas?
+# R/
+# pytest, unittest, nose, behave.
+
 """
 Parte 4 
 
@@ -90,6 +142,5 @@ Parte 4
 • Debe adjuntar el enlace en este documento
 
 ENLACE A MI REPOSITORIO: 
-
+https://github.com/tu_usuario/tu_repositorio
 """
-
