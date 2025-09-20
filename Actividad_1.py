@@ -1,95 +1,53 @@
-# Actividad - 1
+# Parte 1
 
-# Curso CI/CD (Despliegue y automatización de aplicaciones)
+# Variables tipo String
+texto1 = "Hola"
+texto2 = "Mundo"
+print(texto1)
+print(texto2)
 
-# Tema: Python Básico
+# Variables tipo entero
+num1 = 10
+num2 = 3
+print(num1)
+print(num2)
 
-# Docente: Ing. Jean Paul Ordoñez Ibarguen
+# Concatenación de Strings
+print(texto1 + " " + texto2)
 
-# Fecha Entrega Máxima: 05/09/25
+# Operaciones con enteros
+print("Suma:", num1 + num2)
+print("Resta:", num1 - num2)
+print("Multiplicación:", num1 * num2)
+print("División:", num1 / num2)
+print("División entera:", num1 // num2)
+print("Módulo:", num1 % num2)
 
-# Forma entrega: Rama personal
+# Parte 2
 
-# Formato Actividad_1_Nombre_Apellido.py
+arreglo = [5, "a", 8, "b", 2]
+print(arreglo)
+print("Primer elemento:", arreglo[0])
+print("Último elemento:", arreglo[-1])
 
-# ----------------------------------------------------------------
+# Solo operaciones entre números
+print("Suma primer y último elemento:", arreglo[0] + arreglo[-1])
+print("Resta primer y último elemento:", arreglo[0] - arreglo[-1])
+print("Multiplicación primer y último elemento:", arreglo[0] * arreglo[-1])
 
+# Parte 3
 
+# ¿Qué es CI/CD?
+# CI/CD significa Integración Continua y Entrega/Despliegue Continuo. Es una práctica de desarrollo de software donde los cambios se integran, prueban y despliegan automáticamente y de forma frecuente.
 
-"""
-Parte 1
+# ¿Qué herramientas hay para desplegar aplicaciones?
+# Algunas herramientas son: Docker, Kubernetes, AWS Elastic Beanstalk, Heroku, Azure App Service.
 
-- Declare 2 variables de tipo String (Cadena o texto) y luego imprima cada una en consola
+# ¿Qué herramientas hay para automatizar despliegues?
+# Jenkins, GitHub Actions, GitLab CI/CD, CircleCI, Travis CI, Azure DevOps.
 
-- Declare 2 variables de tipo entero (int) y luego imprima cada una en consola
+# ¿Qué herramientas en python para automatizar pruebas?
+# pytest, unittest, nose, behave, tox.
 
-- Con las variables de tipo String, realiza la concatenación de ambas, imprimiendo el resultado en consola.
-
-- Con las variables de tipo entero, realiza la suma, resta, multiplicación, división, división entera, módulo entre ambas. Recuerde imprimir los resultados en consola.
-
-"""
-
-# PONER SOLUCIÓN PARTE 1
-
-
-
-
-
-
-"""
-Parte 2
-
-- Defina un arreglo de números y letras con longitud mínima de 5 elementos
-- Imprima el arreglo en consola.
-- Imprimaa el primer elemento del arreglo por posición
-- Imprimaa el último elemento del arreglo por posición
-- Imprima la suma entre el primer valor del elemento y el último (Recuerde tomarlo por nombreArreglo[Posición])
-- Imprima la resta entre el primer valor del elemento y el último (Recuerde tomarlo por nombreArreglo[Posición])
-- Imprima la multiplicación entre el primer valor del elemento y el último (Recuerde tomarlo por nombreArreglo[Posición])
-
-"""
-
-# PONER SOLUCIÓN PARTE 1
-
-
-
-"""
-Parte 3
-
-Responda. ¿Qué es CI/CD?
-
-R/
-
-Responda. ¿Qué herramientas hay para desplegar aplicaciones?
-
-R/
-
-Responda. ¿Qué herramientas hay para automatizar despliegues?
-
-R/
-
-Responda. ¿Qué herramientas en python para automatizar pruebas?
-R/
-
-"""
-
-
-"""
-Parte 4 
-
-- Cree un repositorio personal donde va a gestionar sus despliegues y proyectos
-- Cree una carpeta en su maquina donde almacenara su repositorio creado
-- Clone el repositorio dentro de la carpeta
-- Modifique su archivo README poniendo el enlace de su repositorio
-
-
-(Tenga en cuenta):
-
-• El repositorio debe ser público
-• El repositorio debe tener su respectivo README
-• Debe adjuntar el enlace en este documento
-
-ENLACE A MI REPOSITORIO: 
-
-"""
-
+#PARTE 4
+#mi repositorio https://github.com/samuel021893/despliegue.git
