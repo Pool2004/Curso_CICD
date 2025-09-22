@@ -93,11 +93,16 @@ elif operacion == "/":
 # SOLUCION
 vocale = ("a", "e", "i", "o","u")
 
-palabra = input("ingrese una palabra")
+palabra = input("ingrese una palabra").lower()
+contador = 0
+for letra in palabra:
+    if letra in vocales:
+        contador += 1
 
-
+print(f"La palabra {palabra} tiene {contador} vocal(es).")
 
 # - - - - - - --  -- - - - - - - - - - - - -- -  -- - - - - - - - - -- - -  -- - - -
 # - - - - --  IMPORTANTE - - - - - -- 
 
 # La solución debe hacerla en su rama respectiva, plazo maximo viernes 19/09/2025 a las 12 PM (Noche)
+
