@@ -12,7 +12,7 @@ class Operacion(BaseModel):
 # Variable global para el número secreto
 numero_secreto = random.randint(1, 10)
 
-@app.get("/saludo")
+@app.post("/saludo")
 def saludo(nombre: str = "Mundo"):
     return {"mensaje": f"Hola, {nombre}!"}
 
@@ -26,7 +26,7 @@ def restar(datos: Operacion):
     resultado = datos.a - datos.b
     return {"operacion": "resta", "resultado": resultado}
 
-@app.get("/adivinar")
+@app.post("/adivinar")
 def adivinar(numero: int):
     if numero == numero_secreto:
         return {"mensaje": "¡Correcto! Adivinaste el número."}
