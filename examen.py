@@ -15,7 +15,6 @@ def agregar_estudiante(estudiante: Estudiante):
     estudiantes.append(estudiante)
     return estudiante
 
-
 @app.get("/estudiantes", response_model=List[Estudiante])
 def obtener_estudiantes():
     return estudiantes
@@ -46,4 +45,3 @@ def eliminar_estudiante(nombre: str):
             estudiantes.remove(e)
             return {"mensaje": f"Estudiante {nombre} eliminado"}
     raise HTTPException(status_code=404, detail="Estudiante no encontrado")
-
