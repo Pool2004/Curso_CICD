@@ -30,7 +30,7 @@ for i in range(1, 11):
 # Usa un while para seguir intentando hasta que acierte.
 
 # SOLUCION
-secreto = 7
+secreto = 6
 adivina = int(input("Adivina el número secreto entre 1 y 10: "))
 while adivina != secreto:
     print("Incorrecto, intenta de nuevo.")
