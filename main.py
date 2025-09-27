@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 import random
+from pyngrok import ngrok
 
 app = FastAPI()
 
@@ -12,8 +13,10 @@ class Operacion(BaseModel):
 # Variable global para el número secreto
 numero_secreto = random.randint(1, 10)
 
-@app.get("/saludo")
-def saludo(nombre: str = "Mundo"):
+
+
+@app.post("/saludo")
+def saludo(nombre: str = " el Mundo"):
     return {"mensaje": f"Hola, {nombre}!"}
 
 @app.post("/sumar")
@@ -32,5 +35,7 @@ def adivinar(numero: int):
         return {"mensaje": "¡Correcto! Adivinaste el número."}
     elif numero < numero_secreto:
         return {"mensaje": "El número es mayor."}
-    else:
+    elif numero > numero_secreto:
         return {"mensaje": "El número es menor."}
+    else:
+        return {"mensaje": "Número fuera de rango. Intenta con un número entre 1 y 10."}
