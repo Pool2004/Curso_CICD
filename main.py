@@ -49,7 +49,23 @@ def adivinar_get(numero: int):
     else:
         return {"mensaje": "El número es menor."}
     
+<<<<<<< HEAD
 @app.get("/j")
 def endpoint_raiz():
     # 3. La función devuelve un diccionario (que FastAPI convierte automáticamente a JSON)
     return {"mensaje": "¡Hola, este es mi primer endpoint de Python en VS Code!"}
+=======
+
+# Endpoint para reiniciar el número secreto
+@app.post("/reiniciar")
+def reiniciar():
+    global numero_secreto
+    numero_secreto = random.randint(1, 10)
+    return {"mensaje": "El número secreto ha sido reiniciado."}
+
+# Endpoint para obtener el número secreto (solo para pruebas)
+@app.get("/numero_secreto")
+def obtener_numero_secreto():
+    return {"numero_secreto": numero_secreto}
+
+>>>>>>> 7c5d01b929e73cfa38f18d43be3255480e279fda
