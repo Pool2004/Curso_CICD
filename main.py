@@ -1,49 +1,36 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI
 from pydantic import BaseModel
-from typing import List
+import random
 
-app = FastAPI(title="API CRUD de Estudiantes")
+app = FastAPI()
 
-class Estudiante(BaseModel):
-    nombre: str
-    nota: float
+# Modelo para operaciones matemáticas
+class Operacion(BaseModel):
+    a: float
+    b: float
 
-estudiantes: List[Estudiante] = []
+# Variable global para el número secreto
+numero_secreto = random.randint(1, 10)
 
-@app.post("/estudiantes", response_model=Estudiante)
-def agregar_estudiante(estudiante: Estudiante):
-    estudiantes.append(estudiante)
-    return estudiante
+@app.get("/saludo")
+def saludo(nombre: str = "Mundo"):
+    return {"mensaje": f"Hola, {nombre}!"}
 
+@app.post("/sumar")
+def sumar(datos: Operacion):
+    resultado = datos.a + datos.b
+    return {"operacion": "suma", "resultado": resultado}
 
-@app.get("/estudiantes", response_model=List[Estudiante])
-def obtener_estudiantes():
-    return estudiantes
+@app.post("/restar")
+def restar(datos: Operacion):
+    resultado = datos.a - datos.b
+    return {"operacion": "resta", "resultado": resultado}
 
-@app.get("/estudiantes_notas")
-def obtener_estudiantes_notas():
-    return [{"nombre": e.nombre, "nota": e.nota} for e in estudiantes]
-
-@app.get("/promedio")
-def calcular_promedio():
-    if not estudiantes:
-        return {"promedio": 0}
-    promedio = sum(e.nota for e in estudiantes) / len(estudiantes)
-    return {"promedio": round(promedio, 2)}
-
-@app.put("/estudiantes/{nombre}", response_model=Estudiante)
-def actualizar_estudiante(nombre: str, datos: Estudiante):
-    for idx, e in enumerate(estudiantes):
-        if e.nombre == nombre:
-            estudiantes[idx] = datos
-            return datos
-    raise HTTPException(status_code=404, detail="Estudiante no encontrado")
-
-@app.delete("/estudiantes/{nombre}")
-def eliminar_estudiante(nombre: str):
-    for e in estudiantes:
-        if e.nombre == nombre:
-            estudiantes.remove(e)
-            return {"mensaje": f"Estudiante {nombre} eliminado"}
-    raise HTTPException(status_code=404, detail="Estudiante no encontrado")
-
+@app.get("/adivinar")
+def adivinar(numero: int):
+    if numero == numero_secreto:
+        return {"mensaje": "¡Correcto! Adivinaste el número."}
+    elif numero < numero_secreto:
+        return {"mensaje": "El número es mayor."}
+    else:
+        return {"mensaje": "El número es menor."}
