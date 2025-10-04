@@ -34,3 +34,8 @@ def adivinar(numero: int):
         return {"mensaje": "El número es mayor."}
     else:
         return {"mensaje": "El número es menor."}
+    
+
+@app.get("/test")
+def test():
+    return {"mensaje": "El sistema está funcionando correctamente."}
