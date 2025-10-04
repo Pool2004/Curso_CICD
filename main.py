@@ -48,3 +48,17 @@ def adivinar_get(numero: int):
         return {"mensaje": "El número es mayor."}
     else:
         return {"mensaje": "El número es menor."}
+    
+
+# Endpoint para reiniciar el número secreto
+@app.post("/reiniciar")
+def reiniciar():
+    global numero_secreto
+    numero_secreto = random.randint(1, 10)
+    return {"mensaje": "El número secreto ha sido reiniciado."}
+
+# Endpoint para obtener el número secreto (solo para pruebas)
+@app.get("/numero_secreto")
+def obtener_numero_secreto():
+    return {"numero_secreto": numero_secreto}
+
