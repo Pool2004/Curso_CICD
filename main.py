@@ -39,3 +39,12 @@ def adivinar(numero: int):
 @app.get("/test")
 def test():
     return {"mensaje": "El sistema está funcionando correctamente."}
+
+@app.get("/adivinar/{numero}")
+def adivinar_get(numero: int):
+    if numero == numero_secreto:
+        return {"mensaje": "¡Correcto! Adivinaste el número."} 
+    elif numero < numero_secreto:
+        return {"mensaje": "El número es mayor."}
+    else:
+        return {"mensaje": "El número es menor."}
