@@ -48,3 +48,8 @@ def adivinar_get(numero: int):
         return {"mensaje": "El número es mayor."}
     else:
         return {"mensaje": "El número es menor."}
+    
+@app.get("/j")
+def endpoint_raiz():
+    # 3. La función devuelve un diccionario (que FastAPI convierte automáticamente a JSON)
+    return {"mensaje": "¡Hola, este es mi primer endpoint de Python en VS Code!"}
