@@ -67,4 +67,7 @@ def reiniciar():
 def obtener_numero_secreto():
     return {"numero_secreto": numero_secreto}
 
+@app.get("/test_endpoint")
+def test_endpoint():
+    return {"mensaje": "El sistema está funcionando correctamente. Desde railway"}
 
