@@ -4,7 +4,7 @@ import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import pytest
 import httpx
-from api import app
+from api_desplegar.api import app
 
 @pytest.mark.asyncio
 async def test_get_frases():
