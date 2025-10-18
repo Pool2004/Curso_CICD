@@ -1,0 +1,9 @@
+services:
+  web:
+    build: .
+    container_name: fastapi_app
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/Curso_CICD
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
