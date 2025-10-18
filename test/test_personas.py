@@ -1,5 +1,5 @@
 from fastapi.testclient import TestClient
-from personas import app, personas_db
+from API.main import app, personas_db
 
 client = TestClient(app)
 
