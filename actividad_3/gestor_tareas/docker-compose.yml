@@ -1,0 +1,42 @@
+version: "3.9"
+
+services:
+  # --- Base de datos PostgreSQL ---
+  db:
+    image: postgres:15
+    container_name: gestor-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 12345
+      POSTGRES_DB: gestor_tareas
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  # --- API FastAPI ---
+  api:
+    build: .
+    container_name: gestor-api
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql://postgres:12345@db:5432/gestor_tareas
+    depends_on:
+      - db
+    volumes:
+      - .:/app
+    restart: always
+
+  # --- Servidor Ubuntu (para pruebas) ---
+  ubuntu-server:
+    image: ubuntu:latest
+    container_name: servidor-ubuntu
+    tty: true
+    depends_on:
+      - api
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+volumes:
+  postgres_data:

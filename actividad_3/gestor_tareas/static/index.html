@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Gestor de Tareas (PostgreSQL)</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header>
+    <h1>📘 Gestor de Tareas</h1>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <form id="form-tarea">
+        <input id="titulo" placeholder="Título de la tarea" required>
+        <input id="descripcion" placeholder="Descripción">
+        <select id="prioridad">
+          <option value="baja">Baja</option>
+          <option value="media" selected>Media</option>
+          <option value="alta">Alta</option>
+        </select>
+        <button type="submit">➕ Agregar</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>📋 Lista de Tareas</h2>
+      <div id="lista-tareas" class="tareas-grid"></div>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+:root {
+  --azul-pastel: #cfe2ff;
+  --azul-intenso: #2563eb;
+  --azul-suave: #3b82f6;
+  --blanco: #ffffff;
+  --gris-texto: #1e293b;
+  --verde: #16a34a;
+  --rojo: #dc2626;
+  --amarillo: #f59e0b;
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background-color: var(--azul-pastel);
+  color: var(--gris-texto);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background: var(--azul-suave);
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+main {
+  flex: 1;
+  padding: 1.5rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Formulario */
+.form-section {
+  background: var(--blanco);
+  padding: 1rem;
+  border-radius: var(--radius);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+input, select {
+  padding: 0.6rem;
+  border: 1px solid #d1d5db;
+  border-radius: var(--radius);
+  flex: 1 1 150px;
+  font-size: 1rem;
+}
+
+button {
+  background-color: var(--azul-intenso);
+  color: white;
+  border: none;
+  padding: 0.7rem 1rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Lista de tareas */
+h2 {
+  color: var(--azul-intenso);
+  margin-bottom: 0.5rem;
+}
+
+.tareas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.tarea-card {
+  background: var(--blanco);
+  padding: 1rem;
+  border-radius: var(--radius);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  border-left: 6px solid var(--azul-suave);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease;
+}
+
+.tarea-card:hover {
+  transform: translateY(-4px);
+}
+
+.tarea-card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.tarea-card p {
+  margin: 0.4rem 0;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+.tarea-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.8rem;
+}
+
+.prioridad {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.prioridad.alta { color: var(--rojo); }
+.prioridad.media { color: var(--amarillo); }
+.prioridad.baja { color: var(--verde); }
+
+.acciones button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.acciones button:hover {
+  transform: scale(1.15);
+}

@@ -1,0 +1,114 @@
+Proyecto Final – Módulo CI/CD
+Título: Aplicación Cliente-Servidor con Docker, Testing y Despliegue Continuo
+
+1. Objetivo General
+
+Desarrollar una aplicación completa basada en arquitectura cliente-servidor, donde el servidor expone una API REST y el cliente consume dicha API. Toda la aplicación debe estar contenedorizada con Docker y debe contar con pruebas automatizadas, documentación de endpoints, y un despliegue en la nube mediante un servicio de preferencia (Railway, Render, Ngrok, Netlify, etc.).
+
+2. Objetivos Específicos
+
+Diseñar y construir una API REST funcional usando un framework de backend (Flask o FastAPI).
+
+Desarrollar un cliente web o CLI que consuma la API.
+
+Dockerizar la aplicación completa (cliente + servidor) dentro de un mismo contenedor.
+
+Implementar pruebas automatizadas para cada endpoint usando PyTest, TestClient o AsyncClient.
+
+Documentar la API (Swagger, Redoc, o documentación manual).
+
+Desplegar la aplicación completa en un servicio de hosting o despliegue.
+
+3. Requerimientos Técnicos
+
+Servidor (API):
+
+Desarrollado con Python usando Flask o FastAPI.
+
+Debe tener mínimo 3 endpoints CRUD (ejemplo: usuarios, tareas, productos).
+
+Debe incluir manejo de errores y códigos de estado HTTP.
+
+Debe tener pruebas unitarias o de integración por endpoint.
+
+Cliente:
+
+Puede ser un cliente web simple (HTML + JS + Fetch API) o una interfaz de consola (Python CLI).
+
+Debe consumir al menos 2 endpoints del servidor.
+
+Dockerización:
+
+La aplicación completa debe funcionar dentro de un solo contenedor Docker.
+
+Se debe incluir un Dockerfile funcional con los pasos de instalación, copiado del código y ejecución.
+
+El contenedor debe exponer el puerto necesario (por ejemplo, 8000 o 5000).
+
+Pruebas:
+
+Cada endpoint debe tener mínimo una prueba automatizada.
+
+Las pruebas deben ejecutarse con PyTest o un cliente de prueba (TestClient, AsyncClient).
+
+Despliegue:
+
+La aplicación debe ser desplegada en un servicio gratuito a elección (Railway, Render, Ngrok, etc.).
+
+Se debe entregar la URL pública de acceso al despliegue.
+
+4. Estructura Sugerida del Proyecto
+📦 proyecto-cicd/
+├── app/
+│   ├── main.py              # Código de la API
+│   ├── routes/
+│   │   └── endpoints.py     # Endpoints principales
+│   └── models/
+│       └── data.py          # Estructuras o clases
+├── client/
+│   └── client_app.py        # Código del cliente
+├── tests/
+│   └── test_endpoints.py    # Pruebas automatizadas
+├── requirements.txt
+├── Dockerfile
+├── README.md
+└── Docs.txt                 # Documentación
+
+5. Entregables
+
+* Código fuente completo del proyecto.
+
+* Archivo Dockerfile funcional.
+
+* Carpeta tests con pruebas automatizadas exitosas.
+
+* Documentación de la API (/docs o manual en README.md).
+
+* URL pública del despliegue funcional.
+
+Capturas de pantalla o video corto mostrando el flujo completo.
+
+7. Criterios de Evaluación
+
+API funcional y estructurada	20%
+Cliente funcional que consuma la API	15%
+Pruebas automatizadas exitosas	20%
+Dockerfile y contenedor funcional	20%
+Despliegue en servicio externo	15%
+Documentación y presentación	10%
+
+8. Observaciones
+
+Los estudiantes pueden usar Railway, Render, Ngrok o cualquier otro servicio de despliegue gratuito.
+
+Se valorará el uso de GitHub Actions para automatizar pruebas y construcción de la imagen.
+
+Se recomienda incluir un archivo README.md con instrucciones claras para ejecutar el proyecto.
+
+9. Otros
+
+Los grupos pueden ser de max 3 estudiantes.
+
+La fecha de entrega es 18/10/2025
+
+Debe entregar el repositorio con el proyecto.
