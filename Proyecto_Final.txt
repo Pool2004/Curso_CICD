@@ -109,6 +109,6 @@ Se recomienda incluir un archivo README.md con instrucciones claras para ejecuta
 
 Los grupos pueden ser de max 3 estudiantes.
 
-La fecha de entrega es 18/10/2025
+La fecha de entrega es 22/10/2025
 
 Debe entregar el repositorio con el proyecto.
