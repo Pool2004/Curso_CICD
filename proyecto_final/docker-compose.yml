@@ -1,0 +1,45 @@
+version: "3.9"
+
+services:
+  api:
+    build:
+      context: .           # Contexto raíz del proyecto
+      dockerfile: Dockerfile
+    container_name: gestor-api
+    ports:
+      - "8000:8000"        # Exponer FastAPI al host
+    volumes:
+      - ./backend:/app
+      - ./templates:/app/templates
+      - ./frontend:/app/frontend
+      - ./backend/contacts.json:/app/contacts.json
+    depends_on:
+      - db
+    restart: unless-stopped
+
+  db:
+    image: postgres:15
+    container_name: gestor-db
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: contacts_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+
+  frontend:
+    image: nginx:alpine
+    container_name: frontend
+    ports:
+      - "5500:80"
+    volumes:
+      - ./frontend:/usr/share/nginx/html
+    depends_on:
+      - api
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
