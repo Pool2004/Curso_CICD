@@ -71,3 +71,6 @@ def obtener_numero_secreto():
 def test_endpoint():
     return {"mensaje": "El sistema está funcionando correctamente. Desde railway"}
 
+@app.get("/testing")
+def testing():
+    return {"mensaje": "Este es un endpoint de prueba para verificar el funcionamiento."}
