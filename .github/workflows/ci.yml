@@ -3,6 +3,8 @@ name: CI FastAPI
 on:
   push:
     branches: [ deploy ]
+  pull_request:
+    branches: [ deploy ]
   
 jobs:
   build-and-test:
@@ -30,3 +32,11 @@ jobs:
       - name: Run API tests
         run: |
           pytest test/ --maxfail=1 --disable-warnings -q
+
+      - name: Desplegar en Railway
+        run: |
+          npm i -g @railway/cli
+          railway up --service mi-api --detach
+        env:
+          RAILWAY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
